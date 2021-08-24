@@ -15,11 +15,11 @@ public class MortgageCalculator {
         this.annualRate=annualRate;
     }
 
-    private int getnumberofPayments(){
+    private int getNumberOfPayments(){
         return termInYears*12;
     }
 
-    private float getMonthlyInterestRates(){
+    private float getMonthlyInterestRate(){
         float interestRate;
         interestRate=annualRate/100;
         interestRate/=12;
@@ -28,11 +28,11 @@ public class MortgageCalculator {
     }
     public  void calculateMonthlyPayment(){
         long P= loanAmount;
-        float r=getMonthlyInterestRates();
-        int n=getnumberofPayments();
+        float r=getMonthlyInterestRate();
+        int n=getNumberOfPayments();
 
         double M = P * (((r * Math.pow(1 + r, n))) / ((Math.pow((1 + r), n)) - 1));
-        M=this.monthlyPayment;
+        this.monthlyPayment=M;
     }
     public String tostring(){
         DecimalFormat df;
