@@ -34,7 +34,7 @@ public class MortgageCalculator {
         double M = P * (((r * Math.pow(1 + r, n))) / ((Math.pow((1 + r), n)) - 1));
         this.monthlyPayment=M;
     }
-    public String tostring(){
+    public String toString(){
         DecimalFormat df;
         df=new DecimalFormat("####0.00");
         return "monthlyPayment: " + df.format(monthlyPayment);
