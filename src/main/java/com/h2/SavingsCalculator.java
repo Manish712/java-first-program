@@ -29,12 +29,12 @@ public class SavingsCalculator {
          YearMonth yearMonth;
          yearMonth=YearMonth.of(date.getYear(), date.getMonth());
          int totalDaysInMonth = yearMonth.lengthOfMonth();
-         int remainingdays= date.getDayOfMonth();
+         int remainingdays= totalDaysInMonth- date.getDayOfMonth();
          return remainingdays;
 
      }
      public float calculate(){
-         return(sumofdebits()-sumofcredits());
+         return(sumofCredits()-sumofDebits());
      }
 
     public static void main(String[] args) {
