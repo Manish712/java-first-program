@@ -24,7 +24,7 @@ public class BestLoanRates {
         String name= scanner.nextLine();
         System.out.println("Hello "   + name);
 
-        System.out.println("Enter the loan terms (in year)");
+        System.out.println("Enter the loan terms (in years)");
         int loanTermInYears = scanner.nextInt();
         float bestRate= getRates(loanTermInYears);
         if(bestRate==0.0f){
