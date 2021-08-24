@@ -28,10 +28,10 @@ public class Finance {
          return false;
      }
 
-     public static void executeCommand(String command , String[] arguments){
+     private static void executeCommand(String command , String[] arguments){
          switch(command){
              case BEST_LOAN_RATES:
-                 System.out.println("Finding your net savings ...");
+                 System.out.println("Finding best loan rates ...");
                  BestLoanRates.main(arguments);
                  return;
 
